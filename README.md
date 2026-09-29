@@ -39,6 +39,25 @@
 
 ---
 
+## English
+
+**lhg-craft — AI programming discipline.** Tiered clarification, written plans, TDD, independent review and evidence gates — engineering rigor for AI-assisted development. Install: `npx skills add lhg-skills/lhg-craft`.
+
+---
+
+## FAQ
+
+**Q：lhg-craft 有什么用？**
+适合的场景：用 AI 写代码想要工程化规范：分级澄清需求、先出计划书、TDD、独立评审加证据门禁。
+
+**Q：免费吗？怎么安装？**
+开源免费（MIT，可商用、保留署名）。安装：`npx skills add lhg-skills/lhg-craft`，或 clone 仓库把 `SKILL.md` 放进对应平台的 skills 目录。
+
+**Q：支持哪些 AI 平台？**
+平台中立纯 Markdown 流程描述，Claude Code、Codex、豆包智能体、Workbuddy、扣子、Trae 等支持 Markdown 指令的环境都可用。更多 skill 见 [lhg-skills 组织主页](https://github.com/lhg-skills)。
+
+---
+
 ## lhg-skills 矩阵
 
 刘洪光出品的中文 Agent Skills，全开源：
