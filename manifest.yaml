@@ -1,0 +1,6 @@
+slug: lhg-craft
+display_name: AI 编程工程规范
+description: AI 编程工程规范：开工前分级澄清（三档定级、写回确认、陌生人可执行的计划书）与写码中纪律（TDD 先见红、执行台账、独立评审、证据门禁），附中文借口自检表与完工清单。
+version: 1.0.0
+author: 刘洪光
+license: MIT
