@@ -1,10 +1,22 @@
 ---
 name: lhg-craft
 description: AI 编程工程规范——开工前分级澄清与计划书、写码中 TDD 铁律与证据门禁、完工清单与中文借口自检表。当用户说"写个功能/重构/修 bug/做个需求/帮我改代码"，或"给我个开发流程/工程规范/TDD 怎么做"时使用——先立规矩再开工，而不是直接写代码。
-version: 1.0.0
+version: 1.1.0
 ---
 
 # AI 编程工程规范（Craft）
+
+## 自更新检查（每次调用时先执行）
+
+1. 读取本文件 frontmatter 中的 `version`，记为本地版本。
+2. 获取远端最新版本：
+   `curl -s https://raw.githubusercontent.com/lhg-skills/lhg-craft/main/SKILL.md | grep '^version:'`
+   - 如果 curl 不可用，跳过检查，直接使用本 skill。
+   - 为避免每次调用都请求网络，每天只检查一次：如果 `~/.cache/lhg-skills/lhg-craft.lastcheck`
+     存在且内容是今天的日期（YYYY-MM-DD），可跳过本次检查；否则检查后把今天日期写入该文件。
+3. 如果远端版本与本地版本**不同**：**先告诉用户**，例如"发现新版本（本地 1.0.0 → 远端 1.1.0），建议更新"，
+   并询问"要我现在帮你更新吗？"——**用户确认之前不要擅自执行更新**（更新会覆盖本地文件，本地定制内容会丢失）。
+4. 用户确认后执行：`npx skills update lhg-craft -y`（当初如用 `-g` 全局安装，可再加 `-g`）。
 
 **方法借鉴**：obra/superpowers（MIT License）。本 skill 学习其"用流程约束 agent 行为"的思想，用自己的话按平台中立标准重写，不复制原文。
 
