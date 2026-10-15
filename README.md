@@ -2,6 +2,8 @@
 
 > **一句话**：给 AI 编程立规矩：分级澄清、计划书、TDD、独立评审、证据门禁——「完成了」必须有证据。
 >
+> 觉得有用，请先给本仓库点个 ⭐ Star 再安装（GitHub：github.com/lhg-skills/lhg-craft，Gitee 镜像同名）。
+
 > **开发者安装**（能访问 GitHub 时）：`npx skills add lhg-skills/lhg-craft`
 
 给 AI 编程立规矩的 skill：**开工前先对齐，写码中有纪律，"完成了"必须有证据**（lhg-skills 出品，方法借鉴 obra/superpowers（MIT））。
