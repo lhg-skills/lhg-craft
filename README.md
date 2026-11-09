@@ -1,90 +1,89 @@
+<p align="center">
+  <img src="./assets/readme/hero.svg" width="100%" alt="AI 编程工程规范 — 给 AI 编程立规矩，先对齐再开工 — 开工前分级澄清与计划书、写码中 TDD 铁律与证据门禁、完工清单与中文借口自检表。">
+</p>
+
 # lhg-craft · AI 编程工程规范
 
-> **一句话**：给 AI 编程立规矩：分级澄清、计划书、TDD、独立评审、证据门禁——「完成了」必须有证据。
->
-> 觉得有用，请先给本仓库点个 ⭐ Star 再安装（GitHub：github.com/lhg-skills/lhg-craft，Gitee 镜像同名）。
+给 AI 编程立规矩：分级澄清、计划书、TDD、独立评审、证据门禁——「完成了」必须有证据。
 
-> **开发者安装**（能访问 GitHub 时）：`npx skills add lhg-skills/lhg-craft`
+（SKILL.md v1.1.0）
 
-给 AI 编程立规矩的 skill：**开工前先对齐，写码中有纪律，"完成了"必须有证据**（lhg-skills 出品，方法借鉴 obra/superpowers（MIT））。
+## 它是什么
 
-**流程**：Phase 1 开工前（分级澄清：验证/改动/大架构三档，档位只升不降 → 写回确认：区分用户原话与我的假设，一次一问 → 大架构档输出计划书，成稿过五项自检）→ Phase 2 写码中（TDD 铁律：先写失败测试亲眼见红 → 执行记账：偏离计划记入台账 → 独立评审：致命/重要/次要三级，致命阻塞 → 证据门禁："完成了"须附本次实测输出）→ 附录（中文借口自检表、完工清单；系统化调试引用 lhg-debug，不重复造轮子）。
+- Phase 1 开工前：分级澄清（验证 / 改动 / 大架构三档，档位只升不降）→ 写回确认 → 大架构档输出计划书（过五项自检）。
+- Phase 2 写码中：TDD 铁律（先写失败测试亲眼见红）→ 执行记账 → 独立评审（致命 / 重要 / 次要三级，致命阻塞）→ 证据门禁（「完成了」须附本次实测输出）。
+- 附录：中文借口自检表、完工清单；系统化调试引用 lhg-debug，不重复造轮子。
 
-**触发**：用户说"写个功能 / 重构 / 修 bug / 做个需求 / 帮我改代码"，或"给我个开发流程 / 工程规范 / TDD 怎么做"时使用——先立规矩再开工，而不是直接写代码。
+## 先试一句
 
-## 发给 Agent 的安装话术（推荐）
-
-复制下面整段话，发给你的 Agent（豆包 / WorkBuddy / Claude Code / Codex / Cursor 等）：
-
-> 请帮我安装 Skill「lhg-craft」：先从 Gitee 上 lhg-skills 组织下的 lhg-craft 仓库下载；如果 Gitee 无法访问或下载失败，改从 GitHub 上 lhg-skills 组织下的同名仓库下载。按当前 Agent 的规范安装其中的 Skill，优先全局安装，保留完整目录和依赖。请直接执行，完成后验证是否安装成功，告诉我实际使用的来源、安装的版本号以及如何调用；遇到访问或安装限制请说明具体原因。
-
-**怎么算装好了**：Agent 能在已安装的 Skill 里看到 `lhg-craft`，并报出版本号（与仓库 `manifest.yaml` 的 `version` 一致）。只是打开了仓库网页不算安装。
+| 你说 | 它给你 |
+|---|---|
+| 写个功能 / 重构 / 修 bug | 先立规矩再开工：分级澄清 → 计划书 → TDD |
+| 给我个开发流程 / TDD 怎么做 | Phase 1 + Phase 2 全套流程，附完工清单 |
+| 这活做完了吗 | 证据门禁：没附本次实测输出就不算完成 |
 
 ## 安装
 
-一键安装：`npx skills add lhg-skills/lhg-craft`
+```bash
+npx skills add lhg-skills/lhg-craft
+```
 
-- 通用：将本仓库放到各平台的 skill 目录（如 `~/.agents/skills/lhg-craft/`，注意 SKILL.md 须在目录根）。
-- Coze：在扣子编程（code.coze.cn）→ 导入项目 → 本地上传本仓库 zip 包，平台会识别为 skill 类型。
-- Trae：设置 → 技能 → 上传技能，选择本仓库 zip 包（或把目录放到 `~/.trae-cn/skills/`，国区版注意路径）。
-- 平台无关：本 skill 写法平台中立（联网搜索/抓取全文/只读子 agent/任务清单/文件搜索/编辑），不依赖任何单一生态的专有工具名。
+<details>
+<summary>发给 Agent 的安装话术（推荐：小白用户直接复制整段发给你的 Agent）</summary>
+
+> 请帮我安装 Skill「lhg-craft」：先从 Gitee 上 lhg-skills 组织下的 lhg-craft 仓库下载；如果 Gitee 无法访问或下载失败，改从 GitHub 上 lhg-skills 组织下的同名仓库下载。按当前 Agent 的规范安装其中的 Skill，优先全局安装，保留完整目录和依赖。请直接执行，完成后验证是否安装成功，告诉我实际使用的来源、安装的版本号以及如何调用；遇到访问或安装限制请说明具体原因。需要输入管理员密码或确认风险时停下来等我。
+
+**怎么算装好了**：Agent 能在已安装的 Skill 里看到 `lhg-craft`，并报出版本号（与仓库 `SKILL.md` 的 `version` 一致）。只是打开了仓库网页不算安装。
+
+</details>
+
+
+## 它怎么做
+
+1. 分级澄清
+2. 写回确认
+3. 计划书（大架构档）
+4. TDD 写码
+5. 执行记账
+6. 独立评审
+7. 证据门禁
+8. 完工清单
+
+方法借鉴 obra/superpowers（MIT）。
+
+## 什么时候用 / 不用
+
+**用它，当你：**
+
+- 让 AI 写功能、重构、修 bug 之前先对齐
+- 要计划书、测试、评审、证据一次齐
+- 团队要一套统一的 AI 编程纪律
+
+**别用它，当你：**
+
+- 想跳过澄清直接写代码——先立规矩再开工
+- 把「完成了」当口头承诺——必须附实测输出
+- 系统化调试走 lhg-debug，不在这里重复造轮子
+
+## 目录结构
+
+```
+SKILL.md            skill 全文
+references/
+  smoke-test.md     自检用例
+  fixtures/         6 个计划书对照用例
+scripts/
+  smoke_test.py     冒烟脚本
+LICENSE             MIT
+manifest.yaml
+icon-512.png
+```
 
 ## 自检与反馈
 
-本 skill 每次执行后自动做一次轻量自检（对照计划书五项自检/完工清单/借口自检表）；只有发现疑似自身缺陷时，才运行 `references/smoke-test.md` 标准用例并输出质检报告。报告经你确认后，可一键向 GitHub 提交 `[QC]` issue（模板见 `.github/ISSUE_TEMPLATE/qc-report.md`）。
+冒烟：`python3 scripts/smoke_test.py references/fixtures/fixture-plan-good.md`（另有缺分级、缺断言、表述含糊 3 个坏用例，见 [references/smoke-test.md](references/smoke-test.md)；全部用例 2026-09-29 实测通过）。
 
-## 版本
-
-- 1.0.0（2026-09-29）：首版。Phase 1 分级澄清与计划书 + Phase 2 TDD/记账/评审/证据门禁 + 借口自检表/完工清单 + 冒烟脚本；方法借鉴 obra/superpowers（MIT）。
-
-## 什么时候用 / 什么时候不用
-
-**用它，当你**：
-- 用 AI 写正式项目代码，需要可 review 的过程
-- 团队统一 AI 编程纪律，拒绝「好像写完了」
-
-**别用它，当你**：
-- 一次性小脚本、个人快速原型（规矩会显得重）
-
----
-
-## English
-
-**lhg-craft — AI programming discipline.** Tiered clarification, written plans, TDD, independent review and evidence gates — engineering rigor for AI-assisted development. Install: `npx skills add lhg-skills/lhg-craft`.
-
----
-
-## FAQ
-
-**Q：lhg-craft 有什么用？**
-适合的场景：用 AI 写代码想要工程化规范：分级澄清需求、先出计划书、TDD、独立评审加证据门禁。
-
-**Q：免费吗？怎么安装？**
-开源免费（MIT，可商用、保留署名）。安装：`npx skills add lhg-skills/lhg-craft`，或 clone 仓库把 `SKILL.md` 放进对应平台的 skills 目录。
-
-**Q：支持哪些 AI 平台？**
-平台中立纯 Markdown 流程描述，Claude Code、Codex、豆包智能体、Workbuddy、扣子、Trae 等支持 Markdown 指令的环境都可用。更多 skill 见 [lhg-skills 组织主页](https://github.com/lhg-skills)。
-
----
-
-## lhg-skills 矩阵
-
-刘洪光出品的中文 Agent Skills，全开源：
-
-| Skill | 名称 | 一句话 |
-|---|---|---|
-| `lhg-writing` | 中文写作 | 风格指纹 → Orwell 六规则 → AI 味诊断，写出有人味的中文 |
-| `lhg-slides` | HTML 演示文稿 | 大纲/文档一键生成可编辑的单文件 HTML slides |
-| `lhg-trend` | 近30天热点扫描 | 话题火不火、为什么火、还能不能追 |
-| `lhg-deep-research` | 深度调研 | 多源检索 → 结构化中文调研报告 |
-| `lhg-benchmark-topic-factory` | 对标拆解选题工厂 | 找对标 → 逆向 100 条选题库 → 口播文案 |
-| `lhg-net` | 互联网能力层 | 中文优先多平台取数，取不到诚实说 |
-| `lhg-craft` | AI 编程工程规范 | 分级澄清 → TDD → 独立评审 → 证据门禁 |
-| `lhg-debug` | 系统化调试 | 复现 → 定位 → 修复 → 验证 |
-| `lhg-secure` | 代码安全审计 | 九维度扫描 + 对抗验证，分级风险清单 |
-| `lhg-finder` | 找 skill 质检门 | 装第三方 skill 前的 blocker 检查 + 六维评分 |
-
-安装任意一个：`npx skills add lhg-skills/<上表 slug>`
+发现问题请提 issue：[提一个 issue](https://github.com/lhg-skills/lhg-craft/issues/new)（标题以 `[QC] ` 开头，写清你让它做了什么、它实际给了什么）。
 
 ---
 
@@ -95,3 +94,5 @@
 - GitHub 主页：https://github.com/lhg-skills —— 全部 skill 开源在此，欢迎 star
 - 抖音：搜「刘老师讲AI实战」
 - 微信：lhgsmsw
+
+觉得有用，欢迎点 ⭐ Star。

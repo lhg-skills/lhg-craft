@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1200" height="360" viewBox="0 0 1200 360"
+     role="img" aria-labelledby="title desc">
+  <title id="title">AI 编程工程规范 — 给 AI 编程立规矩，先对齐再开工</title>
+  <desc id="desc">开工前分级澄清与计划书、写码中 TDD 铁律与证据门禁、完工清单与中文借口自检表。</desc>
+
+  <defs>
+    <style>
+      .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; }
+      .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="360" rx="14" fill="#0F1F16"/>
+  <rect x="1" y="1" width="1198" height="358" rx="14" fill="none" stroke="#243828" stroke-width="1.5"/>
+
+  <g id="title-block">
+    <rect x="64" y="62" width="12" height="12" fill="#FBBF24"/>
+    <text class="mono" x="86" y="74" font-size="17" letter-spacing="2" fill="#8A9A92">AI 编程规范 · SKILL</text>
+    <text class="sans" x="64" y="152" font-size="72" font-weight="700" fill="#E7F0E9">编程规范</text>
+    <text class="sans" x="64" y="196" font-size="26" font-weight="700" fill="#4ADE80">「完成了」必须有证据</text>
+    <text class="sans" x="64" y="238" font-size="21" fill="#E7F0E9">分级澄清、计划书、TDD、独立评审、证据门禁。</text>
+  </g>
+
+  <line x1="700" y1="56" x2="700" y2="256" stroke="#243828" stroke-width="1.5"/>
+
+  <g id="proof">
+    <text class="sans" x="740" y="74" font-size="17" fill="#8A9A92">规矩的三个硬点</text>
+    <text class="mono" x="740" y="118" font-size="20" font-weight="700" fill="#FBBF24">三档</text>
+    <text class="sans" x="794" y="118" font-size="22" font-weight="700" fill="#E7F0E9">分级澄清只升不降</text>
+    <text class="mono" x="740" y="164" font-size="20" font-weight="700" fill="#FBBF24">TDD 铁律</text>
+    <text class="sans" x="833" y="164" font-size="22" font-weight="700" fill="#E7F0E9">先见红再写码</text>
+    <text class="mono" x="740" y="210" font-size="20" font-weight="700" fill="#FBBF24">证据门禁</text>
+    <text class="sans" x="834" y="210" font-size="22" font-weight="700" fill="#E7F0E9">完成须附实测输出</text>
+  </g>
+
+  <line x1="64" y1="288" x2="1136" y2="288" stroke="#243828" stroke-width="1.5"/>
+  <g id="install">
+    <text class="mono" x="64" y="327" font-size="16" fill="#8A9A92">安装</text>
+    <text class="mono" x="140" y="327" font-size="20" font-weight="700" fill="#4ADE80">npx skills add lhg-skills/lhg-craft</text>
+  </g>
+</svg>
